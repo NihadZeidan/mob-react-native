@@ -12,7 +12,7 @@ import {
 } from "native-base";
 
 //   import {View, FlatList, Text} from 'react-native'
-import { styles, zIndex } from "styled-system";
+import { style, styles, zIndex } from "styled-system";
 
 const Category = (props) => {
   const dispatch = useDispatch();
@@ -29,13 +29,14 @@ const Category = (props) => {
 
   const styles = StyleSheet.create({
     BMenu: {
-      width: 20,
-      marginLeft: 460,
+      width: 30,
+      height: 20,
+      marginLeft: 450,
+      marginTop: 20,
       color: "white",
     },
     menu: {
-      marginLeft: 360,
-      zIndex: 2,
+      marginLeft: 320,
     },
   });
 

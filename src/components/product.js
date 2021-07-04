@@ -18,8 +18,9 @@ function Products(props) {
   const styles = StyleSheet.create({
     boxes: {
       width: 200,
-      margin: "auto",
-      marginTop: -300,
+      marginLeft: "auto",
+      marginRight: "auto",
+      marginTop: -350,
     },
     image: {
       flex: 1,
@@ -39,12 +40,8 @@ function Products(props) {
         style={styles.boxes}
         data={state.Pro}
         renderItem={({ item }) => (
-          <Box px={5} py={2} rounded="md" my={0.5} bg="#ccc">
-            <Image
-              source={item.image}
-              style={styles.image}
-         
-            />
+          <Box px={5} py={2} rounded="md" my={6} bg="#ccc">
+            <Image source={item.image} style={styles.image} />
             <Text style={styles.text}> {item.name} </Text>
             <Text style={styles.text}> {item.price}$</Text>
           </Box>
