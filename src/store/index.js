@@ -9,7 +9,6 @@ let reducers = combineReducers({
 
 // // thunk middleware is enabled
 // // extension is enabled too
-
 const myStore = configureStore({ reducer: reducers });
 
 export default myStore;

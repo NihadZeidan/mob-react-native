@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
-import Category from './src/components/category'
-import {Provider } from "react-redux"
-import store from './src/store/index'
-import Products from './src/components/product';
-import { style } from 'styled-system';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import Category from "./src/components/category";
+import { Provider } from "react-redux";
+import store from "./src/store/index";
+import Products from "./src/components/product";
+import { style } from "styled-system";
+// import Cart from "./src/components/cart";
 
 export default function App() {
-  
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+      backgroundColor: "#fff",
+      alignItems: "center",
+      justifyContent: "center",
     },
 
     image: {
@@ -23,7 +23,7 @@ export default function App() {
       height: 720,
       resizeMode: "cover",
       // opacity: 0.2,
-      justifyContent: "center"
+      justifyContent: "center",
     },
     text: {
       color: "black",
@@ -31,26 +31,23 @@ export default function App() {
       fontWeight: "bold",
       textAlign: "center",
       backgroundColor: "#ccc",
-  
     },
-    
-
- 
   });
 
-
   return (
-
-    
     <View style={styles.container}>
-        <Provider store={store}>
-      <ImageBackground source="https://wallpaper.dog/large/9592.jpg" style={styles.image}>
-      <Text style={styles.text}> Store </Text>
-      <Category />
-      <Products/>
-      <StatusBar style="auto" />
-    </ImageBackground>
-    </Provider>
+      <Provider store={store}>
+        <ImageBackground
+          source="https://wallpaper.dog/large/9592.jpg"
+          style={styles.image}
+        >
+          <Text style={styles.text}> Store </Text>
+          {/* <Cart /> */}
+          <Category />
+          <Products />
+          <StatusBar style="auto" />
+        </ImageBackground>
+      </Provider>
     </View>
   );
 }
